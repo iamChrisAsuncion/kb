@@ -1,0 +1,97 @@
+body {
+  background-color: #aaa;
+}
+.a{
+  font-size: 14px;
+}
+.sidenav {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  width: 42px;
+  height: 100vh;
+  background-color: #222;
+  opacity: .8;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+
+
+}
+
+.sign-out {
+  margin-top:auto;
+  margin-bottom: 20px;
+
+}
+.cog {
+  margin-top:8px;
+  margin-bottom: auto;
+}
+
+.book, .profile, .home {
+  margin: 10px 0;
+}
+@media(max-width:768px){
+    .sidenav{
+        width: 100vw;
+        height: 42px;
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+
+    }
+    .sign-out {
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: 4px;
+        margin-top:10px;
+    }
+    .cog {
+      margin-right: auto;
+      margin-left: 8px;
+      margin-top: 10px;
+    }
+
+    .book, .profile, .home {
+      margin-left: 15px;
+margin-right: 15px;
+    }
+    body {
+      padding-top: 40px
+    }
+    .search {
+      display: block;
+      width: 100%;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+    .foot {
+      text-align: center;
+    }
+}
+
+.fa {
+  font-size: 20px;
+}
+
+.over:hover {
+  color: green;
+  background-color: #444;
+  cursor: pointer;
+}
+
+.out {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+th {
+  text-align: left;
+}
+td {
+  text-align: left;
+}
