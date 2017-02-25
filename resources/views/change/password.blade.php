@@ -20,7 +20,7 @@
 
   {!!Form::open([
     'route' => ['settings.password.update', Auth::user()->id],
-    'method' => 'put',
+    // 'method' => 'put',
 
     ])!!}
     <div class="container mt-3">

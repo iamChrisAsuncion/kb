@@ -11,7 +11,7 @@ Looking for someone?
         <h3>Books</h3>
       </div>
       <div class="col-md-2 offset-md-5 mt-1 mb-1">
-        <a href="{{ route('tags.index') }}">Add Courses</a>
+        <a href="{{ route('courses.index') }}">Add Courses</a>
       </div>
       <div class="col-md-3 ">
       <a href="{{ route('clients.create') }}" class=""><button type="button" class="btn adding teal accent-4 btn-lg btn-block"><i class="fa fa-plus"></i> Add Clients</button></a>
@@ -66,20 +66,19 @@ Looking for someone?
           {{ route('sortclient.roledesc') }}
         @endif
         ">Role</a></th>
-        <th class="hidden-md-down">Action</a></th>
+
       </tr>
     </thead>
 <tbody>
       @foreach ($users as $user)
 
-      <tr  @if($user->role_id == 'Disabled')class="text-danger"@endif>
-        <td  scope="row"><a href="{{ route('clients.show', $user->id) }}">{{ $user->id_number }}</a></th>
+      <tr onclick="document.location = '{{ route('clients.show', $user->id) }}' " @if($user->role_id == 'Disabled')class="text-danger"@endif>
+        <td  scope="row">{{ $user->id_number }}</th>
         <td>{{ $user->first_name }}</th>
         <td >{{ $user->last_name }}</th>
         <td class="hidden-md-down">{{ $user->phone }}</th>
         <td class="hidden-md-down">{{ $user->email }}</th>
         <td class="hidden-md-down">{{ $user->role_id }}</th>
-        <td class="hidden-md-down"><a href="{{ route('clients.edit', $user->id) }}" class="btn btn-sm btn-success btn-small"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 
       </tr>
 @endforeach

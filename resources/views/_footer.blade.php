@@ -31,6 +31,8 @@
                   <li class="a"><a href="{{ route('home') }}" class="text-white">Home</a></li>
                   <li class="a"><a href="{{ route('about') }}" class="text-white">About</a></li>
                   <li class="a"><a href="{{ route('support') }}" class="text-white">Support</a></li>
+                  <li class="a"><a href="{{ route('password.request') }}" class="text-white">Terms</a></li>
+                  <li class="a"><a href="{{ route('password.request') }}" class="text-white">Privacy</a></li>
                   <li class="a"><a href="{{ route('password.request') }}" class="text-white">Reset passwod</a></li>
                 </ul>
 
@@ -39,10 +41,10 @@
 <div class="col-md-2  ">
                 <h6 class="title">Social</h6>
                 <hr  class="grey darken-3">
-                <ul >
-                  <li><a href="https://www.facebook.com/SPIAntipoloCity/"  target="_blank" class="btn btn-fb btn-block mt-1 indigo darken-4"><i class="fa fa-facebook left"></i> Facebook</a></li>
-                  <li><a href="https://twitter.com/spiantipolo"  target="_blank" class="btn btn-fb blue btn-block mt-1"><i class="fa fa-twitter left"></i> Twitter</a></li>
-                  <li><a href="https://plus.google.com/100958456708248887089"  target="_blank" class="btn btn-fb mt-1 btn-block danger-color-dark"><i class="fa fa-google-plus left"></i> Google+</a></li>
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a href="https://www.facebook.com/SPIAntipoloCity/"  target="_blank" class="text-white"><i class="fa fa-facebook left"></i></a></li>
+                  <li class="list-inline-item"><a href="https://twitter.com/spiantipolo"  target="_blank" class="text-white"><i class="fa fa-twitter left"></i></a></li>
+                  <li class="list-inline-item"><a href="https://plus.google.com/100958456708248887089"  target="_blank" class="text-white "><i class="fa fa-google-plus left"></i></a></li>
                 </ul>
 
 </div>

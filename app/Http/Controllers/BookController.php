@@ -58,7 +58,7 @@ class BookController extends Controller
             'copies' => 'required|integer|max:4',
             'publisher' => 'sometimes|max:191',
             'publication_date' => 'sometimes|max:191',
-            'serial' => 'required',
+            'serial' => "required|unique:books,serial,$id",
             'cover' => 'sometimes|image',
             'tags' => 'required',
 

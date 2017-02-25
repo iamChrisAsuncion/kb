@@ -21,8 +21,8 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::paginate(10);
-
-        return view('categories.index')->withCategories($categories);
+        $books = Book::all();
+        return view('categories.index')->withCategories($categories)->withBooks($books);
 
 
     }
@@ -89,7 +89,7 @@ class CategoryController extends Controller
         $this->validate($request, [
             'name' => "required|max:100|unique:categories",
         ]);
-        $cat = new Category;
+        $cat = Category::find($id);
         $cat->name = ucwords($request->name);
         $cat->save();
 

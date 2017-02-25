@@ -24,7 +24,8 @@
             @else
               {{ route('sortcategories.namedesc') }}
             @endif">Name</a></th>
-
+            <th>Books</th>
+            <th>Posts</th>
         </tr>
       </thead>
   <tbody>
@@ -32,6 +33,8 @@
         <tr>
           <td>{{ $cat->id }}</td>
           <td><a href="{{ route('categories.edit', $cat->id) }}">{{ $cat->name }}</a></td>
+          <td><label class="badge badge-default">{{ count($cat->books) }}</label></td>
+          <td><label class="badge badge-default">{{ count($cat->posts) }}</label></td>
 
 
         </tr>

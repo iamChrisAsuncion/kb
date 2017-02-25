@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('city')->default('set');
             $table->string('course')->default('1');
             $table->string('password')->default(bcrypt('Password1'));
+            $table->integer('update')->default('0');
             $table->string('role_id')->default('Client');
             $table->string('image')->default('placeholder.jpg');
             $table->rememberToken();

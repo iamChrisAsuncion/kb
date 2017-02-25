@@ -13,6 +13,11 @@ class User extends Authenticatable
     {
       return $this->belongsTo('App\Course', 'id');
     }
+    public function author()
+    {
+      return $this->belongsToMany('App\Post', 'id');
+    }
+
     protected $fillable = [
         'id_number', 'first_name', 'last_name', 'phone', 'email', 'role_id', 'password',
     ];

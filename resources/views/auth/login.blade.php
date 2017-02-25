@@ -2,6 +2,7 @@
 @section('title', 'Login')
 @section('content')
   @include('_nav')
+  @include('_flash')
 <div class="container mt-6 mb-6">
     <div class="row">
         <div class="col-md-4 offset-md-4 px-0">
@@ -12,7 +13,7 @@
 
                             <div class="md-form{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-                                <label for="email" class="col-md-4 control-label">Email</label>
+                                <label for="email" class="control-label">Email</label>
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -23,7 +24,7 @@
 
                         <div class=" md-form{{ $errors->has('password') ? ' has-error' : '' }}">
                                 <input id="password" type="password" class="form-control" name="password" required>
-                                <label for="password" class="col-md-4 control-label">Password</label>
+                                <label for="password" class="control-label">Password</label>
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -31,7 +32,7 @@
                                 @endif
                         </div>
 
-                        <div class="offset-md-1">
+                        <div class="form-group">
                             <input type="checkbox" id="checkbox11"  class="filled-in"  name="remember" {{ old('remember') ? 'checked' : '' }}>
                             <label for="checkbox11">Remember me</label>
                         </div>

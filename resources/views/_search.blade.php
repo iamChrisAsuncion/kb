@@ -6,7 +6,7 @@
       <input type="search" name="search" >
       <label for="search">{{ $slot }}</label>
     </div>
-    <div class="col-md-1 mt-1 ">
+    <div class="col-md-1 ">
       <button type="submit" name="button" class="btn btn-small btn-primary search"><i class="fa fa-search " aria-hidden="true"></i></button>
     </div>
   </div>

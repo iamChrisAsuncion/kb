@@ -2,7 +2,7 @@
 @section('title', 'Books')
 @section('content')
   @include('_nav')
-  @component('_search')
+  @component('_search') 
 Looking for something?
   @endcomponent
 <div class="container">
@@ -48,18 +48,16 @@ Looking for something?
           @endif">Author</a></th>
         <th class="hidden-md-down">Description</th>
         <th class="hidden-md-down">Copies</th>
-        <th class="hidden-md-down">Action</th>
       </tr>
     </thead>
 <tbody>
   @foreach ($books as $book)
-  <tr>
-    <td><a href="{{ route('books.show', $book->id) }}">{{ $book->serial }}</a></th>
+  <tr onclick="document.location = {{ route('books.show', $book->id) }}">
+    <td>{{ $book->serial }}</th>
     <td>{{ $book->title }}</th>
     <td>{{ $book->author }}</th>
     <td class="hidden-md-down">{{ substr($book->description, 0, 100)}} @if (strlen($book->description) > 100) ... @endif</th>
     <td class="hidden-md-down">{{ $book->copies }}</th>
-    <td class="hidden-md-down"><a href="{{ route('books.edit', $book->id) }}" class="btn btn-sm btn-success btn-small"><i class="fa fa-pencil" aria-hidden="true"></i></a></th>
   </tr>
 @endforeach
   </tbody>

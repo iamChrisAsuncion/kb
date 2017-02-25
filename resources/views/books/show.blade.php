@@ -22,7 +22,9 @@
 
 
         @foreach ($book->tags as $tag)
-            <a href="{{ route('tags.edit', $tag->id) }}"><label class="badge badge-default">{{ $tag->name }}</label></a>
+            <a href="{{ route('tags.edit', $tag->id) }}"><div class="chip">
+{{ $tag->name }}
+            </div></a>
         @endforeach
         <hr>
     </div>

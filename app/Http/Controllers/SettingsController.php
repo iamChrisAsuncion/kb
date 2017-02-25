@@ -51,18 +51,20 @@ class SettingsController extends Controller
   }
   public function passwordUpdate(Request $request)
   {
-    $profile = Auth::user();
-    if (Hash::check($request->old_password, $profile->password))
-  {
-  $this->validate($request, [
-    'password' => 'required|confirmed|min:6',
 
-  ]);
-    $profile = Auth::user();
-    $profile->password = bcrypt($request->input('password'));
-    $profile->save();
+    if (Hash::check($request->old_password, Auth::user()->password))
+        {
+              $this->validate($request, [
+                'password' => 'required|confirmed|min:6',
+
+              ]);
+    Auth::user()->password = bcrypt($request->input('password'));
+    Auth::user()->update = 1;
+
+    Auth::user()->save();
+    $request->session()->forget('password');
     Session::flash('Success', 'Password has been successfully updated');
-    return redirect()->route('settings.password');
+    return redirect()->route('home');
   }
   else {
     Session::flash('Failed', 'The password does not match the record');
